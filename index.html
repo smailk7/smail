@@ -1,1 +1,229 @@
 
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top up diamond Mobile Legends dengan mudah.">
+    <title>DIAMONDKU | Top Up Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="logo">DIAMOND<span>KU.</span></a>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#produk">Daftar Diamond</a>
+        <a href="#pesan">Pesan</a>
+    </nav>
+    <a href="#produk" class="nav-button">Top Up</a>
+</header>
+
+<section class="hero" id="beranda">
+    <div class="hero-content">
+        <span class="label">⚡ TOP UP GAME FAVORITMU</span>
+        <h1>Top Up Diamond<br><span>Lebih Mudah!</span></h1>
+        <p>
+            Pilih diamond favoritmu, masukkan ID game,
+            dan kirim pesanan dengan mudah melalui WhatsApp.
+        </p>
+        <a href="#produk" class="primary-button">Pilih Diamond →</a>
+
+        <div class="hero-info">
+            <div><strong>💎</strong><span>Pilihan Diamond</span></div>
+            <div><strong>⚡</strong><span>Pesan Praktis</span></div>
+            <div><strong>📱</strong><span>Ramah Mobile</span></div>
+        </div>
+    </div>
+
+    <div class="hero-art">
+        <div class="glow"></div>
+        <div class="diamond">◆</div>
+        <span class="diamond-caption">MOBILE LEGENDS</span>
+        <h2>DIAMOND</h2>
+        <p>LEVEL UP YOUR GAME</p>
+    </div>
+</section>
+
+<section class="products section" id="produk">
+    <div class="section-heading">
+        <span class="label">PILIH PAKETMU</span>
+        <h2>Diamond <span>Mobile Legends</span></h2>
+        <p>Pilih jumlah diamond yang kamu inginkan.</p>
+    </div>
+
+    <div class="product-grid">
+        <button class="product-card" onclick="pilihPaket('86 Diamond', '20000')">
+            <div class="diamond-icon">◆</div>
+            <h3>86 Diamond</h3>
+            <p>Paket Hemat</p>
+            <strong>Rp20.000</strong>
+            <span class="buy-label">Pilih Paket +</span>
+        </button>
+
+        <button class="product-card" onclick="pilihPaket('172 Diamond', '39000')">
+            <div class="diamond-icon">◆</div>
+            <h3>172 Diamond</h3>
+            <p>Paket Populer</p>
+            <strong>Rp39.000</strong>
+            <span class="buy-label">Pilih Paket +</span>
+        </button>
+
+        <button class="product-card popular" onclick="pilihPaket('257 Diamond', '58000')">
+            <span class="popular-badge">POPULER</span>
+            <div class="diamond-icon">◆</div>
+            <h3>257 Diamond</h3>
+            <p>Paket Favorit</p>
+            <strong>Rp58.000</strong>
+            <span class="buy-label">Pilih Paket +</span>
+        </button>
+
+        <button class="product-card" onclick="pilihPaket('344 Diamond', '77000')">
+            <div class="diamond-icon">◆</div>
+            <h3>344 Diamond</h3>
+            <p>Paket Menengah</p>
+            <strong>Rp77.000</strong>
+            <span class="buy-label">Pilih Paket +</span>
+        </button>
+
+        <button class="product-card" onclick="pilihPaket('429 Diamond', '96000')">
+            <div class="diamond-icon">◆</div>
+            <h3>429 Diamond</h3>
+            <p>Paket Besar</p>
+            <strong>Rp96.000</strong>
+            <span class="buy-label">Pilih Paket +</span>
+        </button>
+
+        <button class="product-card" onclick="pilihPaket('706 Diamond', '155000')">
+            <div class="diamond-icon">◆</div>
+            <h3>706 Diamond</h3>
+            <p>Paket Sultan</p>
+            <strong>Rp155.000</strong>
+            <span class="buy-label">Pilih Paket +</span>
+        </button>
+    </div>
+
+    <p class="price-note">
+        *Harga di atas hanya contoh/demo. Sesuaikan dengan harga jual
+        dan penyedia top up kamu sebelum website dipublikasikan.
+    </p>
+</section>
+
+<section class="order-section section" id="pesan">
+    <div class="order-box">
+        <div class="section-heading">
+            <span class="label">LANGKAH TERAKHIR</span>
+            <h2>Pesan <span>Diamond</span></h2>
+            <p>Lengkapi data game untuk menyiapkan pesananmu.</p>
+        </div>
+
+        <form id="orderForm">
+            <label for="game">Pilih Game</label>
+            <select id="game" required>
+                <option value="Mobile Legends">Mobile Legends: Bang Bang</option>
+            </select>
+
+            <label for="userId">User ID</label>
+            <input id="userId" type="text" placeholder="Contoh: 123456789"
+                   inputmode="numeric" required>
+
+            <label for="zoneId">Zone ID / Server ID</label>
+            <input id="zoneId" type="text" placeholder="Contoh: 1234"
+                   inputmode="numeric" required>
+
+            <label for="package">Paket Diamond</label>
+            <select id="package" required>
+                <option value="">-- Pilih paket diamond --</option>
+                <option value="86 Diamond|20000">86 Diamond - Rp20.000</option>
+                <option value="172 Diamond|39000">172 Diamond - Rp39.000</option>
+                <option value="257 Diamond|58000">257 Diamond - Rp58.000</option>
+                <option value="344 Diamond|77000">344 Diamond - Rp77.000</option>
+                <option value="429 Diamond|96000">429 Diamond - Rp96.000</option>
+                <option value="706 Diamond|155000">706 Diamond - Rp155.000</option>
+            </select>
+
+            <div class="order-total">
+                <span>Total contoh</span>
+                <strong id="totalPrice">Rp0</strong>
+            </div>
+
+            <button type="submit" class="primary-button submit-button">
+                Pesan via WhatsApp →
+            </button>
+            <p class="form-note">
+                Pastikan User ID dan Zone ID benar sebelum mengirim pesanan.
+            </p>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <a href="#" class="logo">DIAMOND<span>KU.</span></a>
+    <p>Website demo top up game • Dibuat untuk GitHub Pages.</p>
+    <p class="copyright">© 2026 DIAMONDKU. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+    const packageSelect = document.getElementById("package");
+    const totalPrice = document.getElementById("totalPrice");
+
+    function formatRupiah(angka) {
+        return "Rp" + Number(angka).toLocaleString("id-ID");
+    }
+
+    function pilihPaket(nama, harga) {
+        packageSelect.value = nama + "|" + harga;
+        totalPrice.textContent = formatRupiah(harga);
+        document.getElementById("pesan").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+    packageSelect.addEventListener("change", function () {
+        if (!this.value) {
+            totalPrice.textContent = "Rp0";
+            return;
+        }
+
+        const harga = this.value.split("|")[1];
+        totalPrice.textContent = formatRupiah(harga);
+    });
+
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const userId = document.getElementById("userId").value.trim();
+        const zoneId = document.getElementById("zoneId").value.trim();
+        const game = document.getElementById("game").value;
+        const selected = packageSelect.value;
+
+        if (!userId || !zoneId || !selected) {
+            alert("Lengkapi semua data terlebih dahulu.");
+            return;
+        }
+
+        const [namaPaket, harga] = selected.split("|");
+
+        const pesan =
+            "Halo, saya ingin memesan top up game.%0A%0A" +
+            "Game: " + encodeURIComponent(game) + "%0A" +
+            "User ID: " + encodeURIComponent(userId) + "%0A" +
+            "Zone ID: " + encodeURIComponent(zoneId) + "%0A" +
+            "Paket: " + encodeURIComponent(namaPaket) + "%0A" +
+            "Harga contoh: " + encodeURIComponent(formatRupiah(harga)) +
+            "%0A%0AMohon konfirmasi pesanan saya.";
+
+        // GANTI NOMOR DI BAWAH DENGAN NOMOR WHATSAPP TOKOMU.
+        const nomorWhatsApp = "6281234567890";
+
+        window.open(
+            "https://wa.me/" + nomorWhatsApp + "?text=" + pesan,
+            "_blank"
+        );
+    });
+</script>
+
+</body>
+</html>
